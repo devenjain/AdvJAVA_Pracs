@@ -1,0 +1,20 @@
+Practical - 5 
+
+-> CREATE TABLE PRODUCT (
+	Prod_id INT PRIMARY KEY,
+	Prod_name VARCHAR(50) NOT NULL,
+	Pro_MNF_year INT,
+	Pro_Exp_year INT,
+	Prod_price INT
+);
+
+Practical - 9
+
+-> CREATE TABLE STUDENT(
+	ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	NAME VARCHAR(100),
+	JAVA int,
+	IOT int,
+	TOC int,
+	MPI int
+);

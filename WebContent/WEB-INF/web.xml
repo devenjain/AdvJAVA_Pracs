@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>AJ_College_Practicals</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>Practical6</display-name>
+    <servlet-name>Practical6</servlet-name>
+    <servlet-class>com.Practical6</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Practical6</servlet-name>
+    <url-pattern>/practical6</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Test</display-name>
+    <servlet-name>Test</servlet-name>
+    <servlet-class>com.Test</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Test</servlet-name>
+    <url-pattern>/Test</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Practical_7</display-name>
+    <servlet-name>Practical_7</servlet-name>
+    <servlet-class>com.Practical_7</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Practical_7</servlet-name>
+    <url-pattern>/Practical_7</url-pattern>
+  </servlet-mapping>
+  
+  <filter>
+    <display-name>AuthFilter</display-name>
+    <filter-name>AuthFilter</filter-name>
+    <filter-class>com.util.AuthFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>AuthFilter</filter-name>
+    <url-pattern>/Practical_8</url-pattern>
+  </filter-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>Practical_8</display-name>
+    <servlet-name>Practical_8</servlet-name>
+    <servlet-class>com.Practical_8</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Practical_8</servlet-name>
+    <url-pattern>/Practical_8</url-pattern>
+  </servlet-mapping>
+</web-app>

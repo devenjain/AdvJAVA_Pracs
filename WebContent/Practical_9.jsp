@@ -1,0 +1,77 @@
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%
+	String id = request.getParameter("userid");
+String driver = "com.mysql.jdbc.Driver";
+String connectionUrl = "jdbc:mysql://localhost:3306/college";
+//String database = "ro";
+String userid = "root";
+String password = "root";
+try {
+	Class.forName(driver);
+} catch (ClassNotFoundException e) {
+	e.printStackTrace();
+}
+Connection connection = null;
+Statement statement = null;
+ResultSet rs = null;
+%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Practical-9</title>
+<!-- <link rel="stylesheet" type="text/css" href="loginCSS.css"> -->
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<script
+	src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script
+	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<br>
+	<center><h3>Retrieve data from database in JSP</h3></center>
+	<br>
+	<table class="table table-hover">
+		<tr>
+			<th scope="col">ID</th>
+			<th scope="col">Name</th>
+			<th scope="col">JAVA</th>
+			<th scope="col">IOT</th>
+			<th scope="col">TOC</th>
+			<th scope="col">MPI</th>
+		</tr>
+
+		<%
+			try {
+			connection = DriverManager.getConnection(connectionUrl, userid, password);
+			statement = connection.createStatement();
+			String sql = "select * from student";
+			rs = statement.executeQuery(sql);
+			while (rs.next()) {
+		%>
+		<tr>
+			<td><%=rs.getString("id")%></td>
+			<td><%=rs.getString("Name")%></td>
+			<td><%=rs.getString("JAVA")%></td>
+			<td><%=rs.getString("IOT")%></td>
+			<td><%=rs.getString("TOC")%></td>
+			<td><%=rs.getString("MPI")%></td>
+
+		</tr>
+		<%
+			}
+		connection.close();
+		} catch (Exception e) {
+		e.printStackTrace();
+		}
+		%>
+	</table>
+</body>
+</html>
