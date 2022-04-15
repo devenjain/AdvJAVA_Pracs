@@ -18,3 +18,11 @@ Practical - 9
 	TOC int,
 	MPI int
 );
+
+Practical-10
+
+->CREATE TABLE USER(
+	uId INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	uName VARCHAR(100),
+	uEmail VARCHAR(100)
+	);

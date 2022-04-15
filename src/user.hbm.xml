@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"https://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.User" table="user">
+		<id name="uId" type="int">
+			<column name="uId" />
+			<generator class="increment" />
+		</id>
+		<property name="uName" type="java.lang.String">
+			<column name="uName" />
+		</property>
+		<property name="uEmail" type="java.lang.String">
+			<column name="uEmail" />
+		</property>
+	</class>
+</hibernate-mapping>
