@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 public class Practical_7 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	private final String userID = "Deven";
-	private final String password = "DevenChopra";
+	private final String userID = "Tanmay";
+	private final String password = "Dayal";
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {

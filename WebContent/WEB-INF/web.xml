@@ -39,7 +39,6 @@
     <servlet-name>Practical_7</servlet-name>
     <url-pattern>/Practical_7</url-pattern>
   </servlet-mapping>
-  
   <filter>
     <display-name>AuthFilter</display-name>
     <filter-name>AuthFilter</filter-name>
@@ -49,7 +48,6 @@
     <filter-name>AuthFilter</filter-name>
     <url-pattern>/Practical_8</url-pattern>
   </filter-mapping>
-  
   <servlet>
     <description></description>
     <display-name>Practical_8</display-name>
@@ -59,5 +57,15 @@
   <servlet-mapping>
     <servlet-name>Practical_8</servlet-name>
     <url-pattern>/Practical_8</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Assignment_2</display-name>
+    <servlet-name>Assignment_2</servlet-name>
+    <servlet-class>com.Assignment_2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Assignment_2</servlet-name>
+    <url-pattern>/Assignment_2</url-pattern>
   </servlet-mapping>
 </web-app>

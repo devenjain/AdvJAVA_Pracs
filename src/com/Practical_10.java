@@ -17,8 +17,8 @@ public class Practical_10 {
 		Transaction tx = session.beginTransaction();
 
 		User user = new User();
-		user.setuName("Deven");
-		user.setuEmail("deven@gmail.com");
+		user.setuName("Tanmay");
+		user.setuEmail("tanmay@gmail.com");
 
 		session.save(user);
 		tx.commit();

@@ -79,7 +79,7 @@ class DAO {
 		try {
 			Statement stmt = conn.createStatement();
 
-			String sql = "insert into Student(id,name,email) values(101,'Deven','deven@gmail.com')";
+			String sql = "insert into Student(id,name,email) values(101,'Tanmay','Tanmay@gmail.com')";
 			return stmt.executeUpdate(sql);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -148,7 +148,7 @@ public class Practical_4 {
 
 	public static void main(String[] args) {
 
-		Practical_4.studentData();
+//		Practical_4.studentData();
 
 		GetDBConnection connection = new GetDBConnection();
 
@@ -162,7 +162,7 @@ public class Practical_4 {
 				System.out.println("Table Created...");
 			if (dao.insertUsingStatement() > 0)
 				System.out.println("Record Inserted Using Statement");
-			if (dao.insertUsingPrepared(301, "Chopra", "Chopra@gmail.com") > 0)
+			if (dao.insertUsingPrepared(301, "Dayal", "Dayal@gmail.com") > 0)
 				System.out.println("Record Inserted Using Prepared Statement");
 			if (dao.insertUsingCallable(201, "Akshay", "Kumar@gmail.com"))
 				System.out.println("Record Inserted Using CalledStatement");

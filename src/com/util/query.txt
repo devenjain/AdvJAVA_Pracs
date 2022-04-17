@@ -26,3 +26,17 @@ Practical-10
 	uName VARCHAR(100),
 	uEmail VARCHAR(100)
 	);
+	
+Assignment - 2
+ ->
+ create table Student2(
+	sid INT NOT NULL PRIMARY KEY,
+	sfname varchar(30),
+	slname varchar(30),
+	smname varchar(30),
+	semail varchar(50),
+	spassword varchar(100),
+	sphone varchar(12), 
+	sdob date,
+	sgender varchar(20)
+);
